@@ -20,4 +20,5 @@ highchart() %>%
                     joinBy = c("name", "country")) %>%
   hc_tooltip(formatter = JS("function(){
                             return ('<b>' + this.point.country +'</b><br> Visited in: ' + this.point.year + '<br> Stayed for: ' + this.point.stay)
-                            }"))
+                            }")) %>% 
+  hc_legend(enabled = FALSE)
